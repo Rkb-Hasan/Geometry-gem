@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry Gem</title>
+
+    <!-- Daisy Ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="m-8">
+    <header></header>
+    <main>
+      <!-- main content container -->
+      <div class="flex flex-col md:flex-row">
+        <!-- shape container -->
+        <div class="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-2">
+          <!-- triangle -->
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img src="./images/triangle.png" alt="triangle" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Triangle</h2>
+              <p>Area = 0.5 X b X h</p>
+
+              <div class="flex justify-around">
+                <div class="flex items-end gap-2">
+                  <input
+                    class="w-20 text-2xl rounded-md border-2 border-gray-400 p-1"
+                    type="text"
+                    placeholder="b"
+                    id="trBase"
+                  />
+                  <span class="inline-block align-text-bottom">cm</span>
+                </div>
+                <div class="flex items-end gap-2">
+                  <input
+                    class="w-20 text-2xl rounded-md border-2 border-gray-400 p-1"
+                    type="text"
+                    placeholder="h"
+                    id="trHeight"
+                  />
+                  <span>cm</span>
+                </div>
+              </div>
+              <div class="card-actions">
+                <button
+                  class="btn btn-primary w-full"
+                  id="calBtn"
+                  onclick="triangleArea()"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- rectangle -->
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img src="./images/rectangle.png" alt="rectangle" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">rectangle</h2>
+              <p>Area = w X l</p>
+
+              <div class="flex justify-around">
+                <div class="flex items-end gap-2">
+                  <input
+                    class="w-20 text-2xl rounded-md border-2 border-gray-400 p-1"
+                    type="text"
+                    placeholder="w"
+                    id="rWidth"
+                  />
+                  <span class="inline-block align-text-bottom">cm</span>
+                </div>
+                <div class="flex items-end gap-2">
+                  <input
+                    class="w-20 text-2xl rounded-md border-2 border-gray-400 p-1"
+                    type="text"
+                    placeholder="l"
+                    id="rLength"
+                  />
+                  <span>cm</span>
+                </div>
+              </div>
+              <div class="card-actions">
+                <button
+                  class="btn btn-primary w-full"
+                  id="calBtn"
+                  onclick="rectangleArea()"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Area calculation container -->
+        <div
+          class="w-68 lg:w-96 border-2 border-gray-700 rounded-md text-center p-4"
+        >
+          <h3 class="text-3xl">Area calculation</h3>
+          <p
+            class="text-2xl bg-red-400 text-white font-bold rounded-lg hover:bg-red-700"
+            id="output"
+          ></p>
+        </div>
+      </div>
+    </main>
+
+    <script src="./scripts/triangle.js"></script>
+  </body>
+</html>
