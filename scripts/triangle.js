@@ -56,8 +56,8 @@ function triangleArea() {
   printArea(output, trArea, "Triangle");
 }
 function rectangleArea() {
-  const base = getInputIdValue("trBase");
-  const height = getInputIdValue("trHeight");
-  const trArea = 0.5 * base * height;
-  printArea(output, trArea, "Rectangle");
+  const width = getInputIdValue("rWidth");
+  const length = getInputIdValue("rLength");
+  const rArea = width * length;
+  printArea(output, rArea, "Rectangle");
 }
